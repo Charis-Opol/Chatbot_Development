@@ -24,7 +24,9 @@ intents = {
 
 def preprocess(text):
     #Tokenize and lemmatize
-    tokens = nltk.word_tokenize(text.lower)
+    #print("Input Text:", text)
+    tokens = nltk.word_tokenize(text.lower(),"english")
+    #print("Tokens:", tokens)
     tokens = [lemmantizer.lemmatize(token) for token in tokens]
     return tokens
 
