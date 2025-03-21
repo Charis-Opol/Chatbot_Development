@@ -63,9 +63,12 @@ patterns = [
 def eliza_response(user_input):
     """Generate a response based on user input."""
     for pattern, responses in patterns:
+        print(pattern)
         match = re.match(pattern, user_input.lower())
+        print(match)
         if match:
             response = random.choice(responses)
+            print(response)
             return response.format(*match.groups())
     return "I'm not sure how to respond to that."
 
